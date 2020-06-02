@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @thesis.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @thesis.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @thesis.email %>
+</p>
+
+<p>
+  <strong>Career:</strong>
+  <%= @thesis.career %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @thesis.grade %>
+</p>
+
+<p>
+  <strong>University:</strong>
+  <%= @thesis.university %>
+</p>
+
+<p>
+  <strong>Delivery time:</strong>
+  <%= @thesis.delivery_time %>
+</p>
+
+<p>
+  <strong>Type document:</strong>
+  <%= @thesis.type_document %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @thesis.body %>
+</p>
+
+<%= link_to 'Edit', edit_thesis_path(@thesis) %> |
+<%= link_to 'Back', theses_path %>

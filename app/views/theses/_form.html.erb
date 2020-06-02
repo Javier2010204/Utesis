@@ -1,0 +1,63 @@
+<%= form_with(model: thesis, local: true) do |form| %>
+  <% if thesis.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(thesis.errors.count, "error") %> prohibited this thesis from being saved:</h2>
+
+      <ul>
+        <% thesis.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :name, class:"mdl-textfield__input" %>
+    <%= form.label 'Nombre',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.number_field :phone, class:"mdl-textfield__input"  %>
+    <%= form.label 'Telefono', class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+    <%= form.text_field :email, class:"mdl-textfield__input"   %>
+    <%= form.label "correo electronico", class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+    <%= form.text_field :career, class:"mdl-textfield__input" %>
+    <%= form.label 'Carrera', class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+    <%= form.text_field :grade, class:"mdl-textfield__input" %>
+    <%= form.label 'Grado Academico', class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+    <%= form.text_field :university, class:"mdl-textfield__input" %>
+    <%= form.label 'Universidad', class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+    <%= form.text_field :delivery_time, class:"mdl-textfield__input" %>
+    <%= form.label 'Tiempo de entrega', class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+    <%= form.text_field :type_document, class:"mdl-textfield__input" %>
+    <%= form.label 'Trabajo que solicita - Tesis, monografia, correccion, etc.', class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-width">
+    <%= form.text_area :body, class:"mdl-textfield__input" %>
+    <%= form.label 'Explique CLARAMENTE que es lo que necesita y si cuenta con algunos avances:', class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="actions margin-top text-right">
+    <%= link_to 'cancelar', service_path, class:'mdl-button mdl-js-button mdl-button--primary margin-right' %>
+    <%= form.submit 'Enviar', class:'mdl-button mdl-js-button mdl-button--raised black white-text'%>
+  </div>
+<% end %>

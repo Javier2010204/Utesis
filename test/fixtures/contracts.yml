@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  place: MyString
+  date: 2020-06-01
+  name: MyString
+  dpi: MyString
+  age: 1
+  civil_status: MyString
+  email: MyString
+  phone: 1
+  service: MyString
+  career: MyString
+  academic_grade: MyString
+  mount: 1
+  fee: 1
+  way_to_pay: MyString
+  contract_service: MyString
+  social: MyString
+
+two:
+  place: MyString
+  date: 2020-06-01
+  name: MyString
+  dpi: MyString
+  age: 1
+  civil_status: MyString
+  email: MyString
+  phone: 1
+  service: MyString
+  career: MyString
+  academic_grade: MyString
+  mount: 1
+  fee: 1
+  way_to_pay: MyString
+  contract_service: MyString
+  social: MyString

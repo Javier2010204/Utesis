@@ -1,0 +1,98 @@
+<%= form_with(model: contract, local: true) do |form| %>
+  <% if contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+
+      <ul>
+        <% contract.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :place, class:"mdl-textfield__input" %>
+    <%= form.label 'Lugar',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.date_select :date, class:"mdl-textfield__input" %>
+    <%= form.label 'Fecha',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :name, class:"mdl-textfield__input" %>
+    <%= form.label 'Nombre',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :dpi, class:"mdl-textfield__input" %>
+    <%= form.label 'Numero de documento de identificacion personal',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.number_field :age, class:"mdl-textfield__input" %>
+    <%= form.label 'Edad',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :civil_status, class:"mdl-textfield__input" %>
+    <%= form.label 'Estado Civil',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :email, class:"mdl-textfield__input" %>
+    <%= form.label 'Correo Electronico',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.number_field :phone, class:"mdl-textfield__input" %>
+    <%= form.label 'Telefono',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :service, class:"mdl-textfield__input" %>
+    <%= form.label 'Servicio que contratara',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :career, class:"mdl-textfield__input" %>
+    <%= form.label 'Carrera',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :academic_grade, class:"mdl-textfield__input" %>
+    <%= form.label 'Grado academico de la tesis',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.number_field :mount, class:"mdl-textfield__input" %>
+    <%= form.label 'Monto total a pagar',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.number_field :fee, class:"mdl-textfield__input" %>
+    <%= form.label 'Pagos en que fraccionará el monto total',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :way_to_pay, class:"mdl-textfield__input" %>
+    <%= form.label 'Forma de pago',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :contract_service, class:"mdl-textfield__input" %>
+    <%= form.label 'Tipo de servicio',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield full-width">
+    <%= form.text_field :social, class:"mdl-textfield__input" %>
+    <%= form.label 'Forma en la que se entero de nosotros',  class:"mdl-textfield__label" %>
+  </div>
+
+  <div class="actions margin-top text-right">
+    <%= link_to 'cancelar', tariffs_path, class:'mdl-button mdl-js-button mdl-button--primary margin-right' %>
+    <%= form.submit 'Enviar', class:'mdl-button mdl-js-button mdl-button--raised black white-text'%>
+  </div>
+<% end %>
